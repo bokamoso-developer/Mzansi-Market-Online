@@ -1,0 +1,7 @@
+import { ShieldCheck } from 'lucide-react'
+import PageHeader from '../../components/common/PageHeader.jsx'
+import { serviceMetrics } from '../../data/mockData.js'
+
+export default function ServicePerformancePage() {
+  return <section className="workspace staff-workspace"><PageHeader eyebrow={<><ShieldCheck size={15} /> Service performance</>} title="Service performance" description="Monitor fulfilment and customer service indicators." /><div className="service-grid">{serviceMetrics.map((metric) => <article className="service-card" key={metric.label}><p>{metric.label}</p><strong>{metric.value}</strong><div><span>Target {metric.target}</span><span className={metric.state === 'On target' ? 'service-state success' : 'service-state watch'}>{metric.state}</span></div></article>)}</div><div className="application-grid staff-card-grid"><article className="application-card"><header><span className="business-mark"><ShieldCheck /></span><div><h2>Fulfilment service</h2><p className="eyebrow">Current period</p></div></header><dl><div><dt>Orders reviewed</dt><dd>684</dd></div><div><dt>On-time dispatch</dt><dd>94.2%</dd></div><div><dt>Delayed orders</dt><dd>40</dd></div></dl></article><article className="application-card"><header><span className="business-mark"><ShieldCheck /></span><div><h2>Customer service</h2><p className="eyebrow">Current period</p></div></header><dl><div><dt>Cases received</dt><dd>91</dd></div><div><dt>Resolved</dt><dd>74</dd></div><div><dt>Open</dt><dd>17</dd></div></dl></article></div></section>
+}
