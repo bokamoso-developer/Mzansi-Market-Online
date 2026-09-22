@@ -24,7 +24,7 @@ React + JavaScript + Vite frontend for three staff roles:
    - Service performance
    - Refund approvals
 
-The design reuses the supplied Mzansi Market `styles.css`, colour variables and logo.
+
 
 ## Run the project
 
@@ -43,8 +43,4 @@ All three use password: `Password123`
 - Order Fulfilment Employee: `fulfilment@mzansi.co.za`
 - Business Manager: `business.manager@mzansi.co.za`
 
-## Backend boundary
 
-This is intentionally a frontend-only project. Search, filtering, routing, modals and UI navigation work in React without a database.
-
-Actions that would change persisted business data are not faked. Product/category/promotion saves, stock reservation, pick/pack/dispatch updates, account registration and refund approval are shown as interfaces but require the future C# API + PostgreSQL connection.
